@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New High Score!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'falling_app/css/style.css' %}">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper float-center">
+        <div class="title">
+            <h1 class="white">Congrats!</h1>
+            <h5 class="black">You've fallen so far!</h5>
+        </div>
+        <div class="main">
+            <p><span class="bold black">Score: </span><span class="white"> {{request.session.score}}</span></p>
+            <form action="posthigh" method="POST">
+                {% csrf_token %}
+                <p><span class="bold black">Enter Your Name: </span><input type="text" name="name" required></p>
+                <input type="hidden" value={{request.session.score}}>
+                <input class="btn btn-success" type="submit" value="Enter">
+            </form>
+        </div>
+        <div class="links">
+            <ul>
+            <li><a href="game"><h4>Jump!</h4></a></li>
+            <li><a href="/"><h6>Back</h6></a></li>
+        </ul>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+
+</body>
+</html>

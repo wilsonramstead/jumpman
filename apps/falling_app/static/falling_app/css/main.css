@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+
+canvas {
+    border:1px solid #d3d3d3;
+    background-image: linear-gradient(rgb(37,79,207),rgb(82,136,222),rgb(132, 255, 235),rgb(241, 201, 66));
+    border-radius: 10px;
+}

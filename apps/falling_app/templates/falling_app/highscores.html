@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'falling_app/css/style.css' %}">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <title>High Scores</title>
+</head>
+<body>
+    <div class="wrapper float-center">
+        <div class="title">
+            <h1 class="white logo">Best Jumpers</h1>
+            <h5 class="black">Oh, they've fallen so far!</h5>
+        </div>
+        <div class="main">
+            <table class="table table-hover">
+                <thead>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </thead>
+
+                <tr><td>1</td><td>{{highscores.0.name}}</td><td>{{highscores.0.score}}</td></tr>
+                <tr><td>2</td><td>{{highscores.1.name}}</td><td>{{highscores.1.score}}</td></tr>
+                <tr><td>3</td><td>{{highscores.2.name}}</td><td>{{highscores.2.score}}</td></tr>
+                <tr><td>4</td><td>{{highscores.3.name}}</td><td>{{highscores.3.score}}</td></tr>
+                <tr><td>5</td><td>{{highscores.4.name}}</td><td>{{highscores.4.score}}</td></tr>
+                <tr><td>6</td><td>{{highscores.5.name}}</td><td>{{highscores.5.score}}</td></tr>
+                <tr><td>7</td><td>{{highscores.6.name}}</td><td>{{highscores.6.score}}</td></tr>
+                <tr><td>8</td><td>{{highscores.7.name}}</td><td>{{highscores.7.score}}</td></tr>
+
+            </table>
+        </div>
+        <div class="links">
+            <ul>
+            <li><a href="game"><h4>Jump Again!</h4></a></li>
+            <li><a href="/"><h5>Back</h5></a></li>
+        </ul>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+
+</body>
+</html>
